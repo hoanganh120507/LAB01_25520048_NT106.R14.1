@@ -51,5 +51,20 @@ namespace lab01
             Lab01_Bai05 f = new Lab01_Bai05();
             f.Show();
         }
+        private void btnBai6_Click(object sender, EventArgs e)
+        {
+            Lab01_Bai06 f = new Lab01_Bai06();
+            f.Show();
+        }
+        private void btnBai7_Click(object sender, EventArgs e)
+        {
+            Lab01_Bai07 f = new Lab01_Bai07();
+            f.Show();
+        }
+        private void btnBai8_Click(object sender, EventArgs e)
+        {
+            Lab01_Bai08 f = new Lab01_Bai08();
+            f.Show();
+        }
     }
 }
