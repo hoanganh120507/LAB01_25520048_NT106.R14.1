@@ -36,7 +36,7 @@ namespace lab01
 
         private void btnBai3_Click(object sender, EventArgs e)
         {
-            lblMax f = new lblMax();
+            Lab01_Bai03 f = new Lab01_Bai03();
             f.Show();
         }
 
