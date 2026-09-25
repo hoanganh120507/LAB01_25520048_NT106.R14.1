@@ -34,6 +34,9 @@
             btnBai3 = new Button();
             btnBai4 = new Button();
             btnBai5 = new Button();
+            btnBai6 = new Button();
+            btnBai7 = new Button();
+            btnBai8 = new Button();
             SuspendLayout();
             // 
             // btnBai0
@@ -48,7 +51,7 @@
             // 
             // btnBai2
             // 
-            btnBai2.Location = new Point(102, 167);
+            btnBai2.Location = new Point(102, 130);
             btnBai2.Name = "btnBai2";
             btnBai2.Size = new Size(114, 29);
             btnBai2.TabIndex = 1;
@@ -68,7 +71,7 @@
             // 
             // btnBai3
             // 
-            btnBai3.Location = new Point(386, 167);
+            btnBai3.Location = new Point(386, 130);
             btnBai3.Name = "btnBai3";
             btnBai3.Size = new Size(128, 29);
             btnBai3.TabIndex = 3;
@@ -78,7 +81,7 @@
             // 
             // btnBai4
             // 
-            btnBai4.Location = new Point(102, 276);
+            btnBai4.Location = new Point(102, 210);
             btnBai4.Name = "btnBai4";
             btnBai4.Size = new Size(114, 29);
             btnBai4.TabIndex = 4;
@@ -88,7 +91,7 @@
             // 
             // btnBai5
             // 
-            btnBai5.Location = new Point(386, 272);
+            btnBai5.Location = new Point(386, 210);
             btnBai5.Name = "btnBai5";
             btnBai5.Size = new Size(133, 29);
             btnBai5.TabIndex = 5;
@@ -96,11 +99,44 @@
             btnBai5.UseVisualStyleBackColor = true;
             btnBai5.Click += btnBai5_Click;
             // 
+            // btnBai6
+            // 
+            btnBai6.Location = new Point(102, 290);
+            btnBai6.Name = "btnBai6";
+            btnBai6.Size = new Size(114, 29);
+            btnBai6.TabIndex = 6;
+            btnBai6.Text = "Bài 6";
+            btnBai6.UseVisualStyleBackColor = true;
+            btnBai6.Click += btnBai6_Click;
+            // 
+            // btnBai7
+            // 
+            btnBai7.Location = new Point(386, 290);
+            btnBai7.Name = "btnBai7";
+            btnBai7.Size = new Size(133, 29);
+            btnBai7.TabIndex = 7;
+            btnBai7.Text = "Bài 7";
+            btnBai7.UseVisualStyleBackColor = true;
+            btnBai7.Click += btnBai7_Click;
+            // 
+            // btnBai8
+            // 
+            btnBai8.Location = new Point(244, 360);
+            btnBai8.Name = "btnBai8";
+            btnBai8.Size = new Size(133, 29);
+            btnBai8.TabIndex = 8;
+            btnBai8.Text = "Bài 8";
+            btnBai8.UseVisualStyleBackColor = true;
+            btnBai8.Click += btnBai8_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(650, 430);
+            Controls.Add(btnBai8);
+            Controls.Add(btnBai7);
+            Controls.Add(btnBai6);
             Controls.Add(btnBai5);
             Controls.Add(btnBai4);
             Controls.Add(btnBai3);
@@ -120,6 +156,8 @@
         private Button btnBai3;
         private Button btnBai4;
         private Button btnBai5;
-       
+        private Button btnBai6;
+        private Button btnBai7;
+        private Button btnBai8;
     }
 }
