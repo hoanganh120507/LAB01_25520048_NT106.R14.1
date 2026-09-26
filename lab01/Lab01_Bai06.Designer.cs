@@ -43,7 +43,6 @@
             txtA.Name = "txtA";
             txtA.Size = new Size(125, 27);
             txtA.TabIndex = 0;
-            txtA.TextChanged += textBox1_TextChanged;
             // 
             // txtB
             // 
@@ -60,7 +59,6 @@
             cboLuaChon.Name = "cboLuaChon";
             cboLuaChon.Size = new Size(151, 28);
             cboLuaChon.TabIndex = 3;
-            cboLuaChon.SelectedIndexChanged += cboLuaChon_SelectedIndexChanged;
             // 
             // btnTinh
             // 
@@ -90,6 +88,7 @@
             btnThoat.TabIndex = 6;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // rtbKetQua
             // 
@@ -103,7 +102,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 480);
             Controls.Add(rtbKetQua);
             Controls.Add(btnThoat);
             Controls.Add(btnXoa);

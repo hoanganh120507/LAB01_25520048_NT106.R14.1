@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace lab01
@@ -15,14 +10,13 @@ namespace lab01
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Lab01_Bai06_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void cboLuaChon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            // Tự động thêm các lựa chọn vào ComboBox khi mở Form
+            cboLuaChon.Items.Clear();
+            cboLuaChon.Items.Add("Bảng cửu chương");
+            cboLuaChon.Items.Add("Tính toán giá trị");
+            cboLuaChon.SelectedIndex = 0; // Chọn sẵn dòng đầu tiên
         }
 
         private void btnTinh_Click(object sender, EventArgs e)
@@ -33,17 +27,25 @@ namespace lab01
                 return;
             }
 
-            int A = Convert.ToInt32(txtA.Text);
-            int B = Convert.ToInt32(txtB.Text);
+            if (!int.TryParse(txtA.Text, out int A) || !int.TryParse(txtB.Text, out int B))
+            {
+                MessageBox.Show("Vui lòng nhập giá trị số nguyên hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (cboLuaChon.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn chức năng tính toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string luaChon = cboLuaChon.SelectedItem.ToString();
-
             rtbKetQua.Clear();
-
 
             if (luaChon == "Bảng cửu chương")
             {
                 int giaTriBCC = B - A;
-                rtbKetQua.AppendText($"Bảng cửu chương của {giaTriBCC}:\n");
+                rtbKetQua.AppendText($"Bảng cửu chương của {giaTriBCC}:\n\n");
 
                 for (int i = 1; i <= 10; i++)
                 {
@@ -52,7 +54,6 @@ namespace lab01
             }
             else if (luaChon == "Tính toán giá trị")
             {
-
                 int hieu = A - B;
                 if (hieu < 0)
                 {
@@ -67,7 +68,6 @@ namespace lab01
                     }
                     rtbKetQua.AppendText($"(A - B)! = {hieu}! = {giaiThua}\n");
                 }
-
 
                 long tongS = 0;
                 for (int i = 1; i <= B; i++)
@@ -84,7 +84,6 @@ namespace lab01
             txtB.Clear();
             rtbKetQua.Clear();
 
-
             if (cboLuaChon.Items.Count > 0)
             {
                 cboLuaChon.SelectedIndex = 0;
@@ -93,7 +92,7 @@ namespace lab01
             txtA.Focus();
         }
 
-        private void Lab01_Bai06_Load(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
